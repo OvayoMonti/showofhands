@@ -83,7 +83,7 @@ define("OI_LIVE",$globalconfig['live']);
 define('DIR_EFP', '/secure/tinymce/plugins/filemanager/');
 define('DIR_EP', '/secure/tinymce/plugins/filemanager/plugin.min.js');
 
-$editer_base_url="http://localhost/showofhands"; 
+$editer_base_url="http://www.showofhands.co.za"; 
 $editer_upload_dir = '/assets/'; // path from base_url to upload base dir
 $editer_current_path = '../../../../assets/'; // relative path from filemanager folder to upload files folder
 $editor_thumbs_base_path = '../../../../thumbs/';
