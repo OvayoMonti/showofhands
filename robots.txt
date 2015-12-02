@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /secure/
+Disallow: /libraries/
+Sitemap:http://www.showofhands.co.za/googlesitemap

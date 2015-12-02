@@ -1,0 +1,41 @@
+<?
+// Search Result Rules
+$tables = array(
+	"cmspage"=>array(
+		"id"=>"pageid",
+		"title"=>"heading",
+		"desc"=>"filecontent",
+		"date"=>"uploaddate",
+		"url"=>"../content/",
+		"like"=>array("heading","filecontent"),
+		"excep"=>array("static"=>0)
+	),
+	"news"=>array(
+		"id"=>"newsid",
+		"title"=>"title",
+		"desc"=>"shortdesc",
+		"date"=>"newsdate",
+		"url"=>"../article/",
+		"like"=>array("title","shortdesc","article"),
+		"excep"=>""
+	),
+	"cmsevents"=>array(
+		"id"=>"newsid",
+		"title"=>"title",
+		"desc"=>"shortdesc",
+		"date"=>"newsdate",
+		"url"=>"../event/",
+		"like"=>array("title","shortdesc","article","venue"),
+		"excep"=>""
+	),
+	"gallery"=>array(
+		"id"=>"galleryid",
+		"title"=>"galleryname",
+		"desc"=>"description",
+		"date"=>"lastmodified",
+		"url"=>"../gallery/",
+		"like"=>array("galleryname","description"),
+		"excep"=>""
+	)
+);
+?>

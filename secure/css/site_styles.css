@@ -1,0 +1,65 @@
+body{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;cursor:default;background-color:#eceded;background-image:url(../images/HeaderBand.gif);background-repeat:repeat-x;background-position:left top;margin:0;padding:0 0 20px}
+form{margin:0;padding:0}
+#print-form{display:none}
+.LogoContainer{height:90px;margin:auto}
+.LoginContainer{width:300px;padding-top:100px;margin:auto}
+.LogoContainer div{float:right;color:#93969a;padding-top:30px;font-size:11px;padding-right:40px}
+.LogoContainer a{display:inline-block;color:#93969a;text-decoration:none;padding-left:15px}
+.LogoContainer a:hover{color:#fff}
+.LoginField{font-size:14px;background-color:#dadce0;width:300px;margin-bottom:5px}
+.LoginButton{background-image:url(../images/ButtonBG.gif);background-repeat:repeat-x;width:100px;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;background-color:#30363e;background-position:left top;height:24px;cursor:pointer;margin-top:5px;border-style:none}
+.LoginContainer h1{font-size:16px}
+.LoginContainer p{font-style:italic;margin:0;padding:0}
+.PageInPage{background-color:#FFF;border:1px solid #cbcfd4;background-image:url(../images/PageInPageBG.gif);background-repeat:repeat-x;background-position:left top;clear:both;margin:20px}
+.PageInPage h1{font-size:16px;text-transform:capitalize;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cbcfd4;color:#e20a16;margin:0;padding:15px 10px 15px 30px}
+.PageInPage h1 a{float:right;font-size:12px;text-decoration:none;color:#e00815;margin-right:30px;margin-top:5px;font-weight:normal;}
+.PageInPage h1 a:hover{text-decoration:underline;}
+.Panel{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cbcfd4;padding:20px 30px}
+.LastPanel{padding:20px 30px}
+.PagingContainer{float:right;padding-top:2px}
+.PagingContainer div{text-align:center;width:20px;background-color:#cbcfd4;padding-top:2px;padding-bottom:2px;float:left;border:1px solid #cbcfd4;margin-left:3px}
+.PagingContainer a{text-align:center;display:block;width:20px;background-color:#FFF;padding-top:2px;padding-bottom:2px;float:left;border:1px solid #cbcfd4;color:#2e343b;text-decoration:none;margin-left:3px}
+.PagingContainer a:hover{background-color:#f1f2f3}
+.PagingContainer table{margin-left:30px;float:left}
+.ListingsTable .Button{width:auto}
+A.ListingsTableLink{display:inline-block;text-decoration:none;background:#30363e;color:#FFF;width:100px;text-align:center;border-bottom:solid 1px #cbcfd4;border-right:solid 1px #cbcfd4;padding:2px 3px}
+A.ListingsTableLink:hover{background-color:#556373}
+.Button{background-image:url(../images/ButtonBG.gif);background-repeat:repeat-x;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;background-color:#30363e;background-position:left top;height:24px;width:100px;cursor:pointer;text-transform:capitalize;border-style:none}
+.RedButton{background-image:url(../images/ButtonBG_Red.gif);background-repeat:repeat-x;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;background-color:#711200;background-position:left top;height:24px;cursor:pointer;text-transform:capitalize;padding-left:5px;padding-right:5px;border-style:none}
+.ListingsTable{width:100%}
+.ListingsTable thead th{background-color:#d4d7dc;color:#FFF;text-transform:capitalize;font-style:italic;background-image:url(../images/TableHeadBG.gif);background-repeat:repeat-x}
+.ListingsTable thead td{background-color:#d4d7dc;color:#FFF;text-transform:capitalize;padding-left:10px;border-left-width:1px;border-left-style:solid;border-left-color:#e5e7ea;font-weight:700;font-style:italic;background-image:url(../images/TableHeadBG.gif);background-repeat:repeat-x}
+.ListingsTable th a {color:#e00815;}
+.ListingsTable th{text-align:left;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cbcfd4;padding-top:7px;padding-bottom:5px;vertical-align:top}
+.ListingsTable td{padding-left:10px;border-bottom-width:1px;border-left-width:1px;border-bottom-style:solid;border-left-style:solid;border-bottom-color:#cbcfd4;border-left-color:#e5e7ea;padding-right:10px}
+
+.SubListingsTable{width:100%;margin-top:-1px;border-top-width:1px;border-top-style:solid;border-top-color:#FFF;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#cbcfd4}
+.SubListingsTable th{text-align:left;vertical-align:top;border-top-width:1px;border-top-style:none;border-top-color:#e5e7ea;padding-top:4px;padding-bottom:4px}
+.SubListingsTable td{text-align:left;vertical-align:top;border-top-width:1px;border-top-style:none;border-top-color:#e5e7ea;border-left-width:1px;border-left-style:solid;border-left-color:#e5e7ea;padding:4px 10px}
+
+.Textfield{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;background-color:#f4f5f6;width:360px;border:1px solid #cbcfd4}
+.Textfield:focus{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;background-color:#FFC;width:360px}
+.TabPanel{padding-left:30px;background-image:url(../images/TabPanelBG.gif);background-position:bottom;background-repeat:repeat-x;height:50px}
+.TabPanel div{float:left;background-color:#FFF;margin-right:10px;margin-top:13px;border-color:#cbcfd4 #cbcfd4 #FFF;border-style:solid;border-width:1px;padding:10px}
+.TabPanel a{display:block;float:left;background-color:#FFF;margin-right:10px;margin-top:13px;color:#8b9097;text-decoration:none;border:1px solid #cbcfd4;background-image:url(../images/OffTabBG.gif);background-repeat:repeat-x;background-position:bottom;padding:10px}
+.TabPanel a:hover{color:#2e343b}
+.PagingButton{background-image:url(../images/ButtonBG.gif);background-repeat:repeat-x;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#FFF;background-color:#30363e;background-position:left top;height:20px;cursor:pointer;text-transform:capitalize;padding-right:5px;padding-left:5px;border-style:none}
+.LinkField{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;background-color:#FFF;border:1px solid #FFF;font-weight:700;cursor:pointer;background-image:none;text-decoration:underline;width:90%}
+.LinkFieldEdit{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;font-weight:700;background-color:#ffc;border:1px solid #cbcfd4;width:90%}
+.LimitWidth{width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic;font-weight:400;padding-top:3px;color:#979a9d}
+.LimitWidth em{font-weight:400;color:#2e343b}
+.NotificationText{font-style:italic;font-weight:400;color:#e20a16;padding-top:3px}
+.DownButton{background-image:url(../images/DownButton.gif);border:none;width:21px;height:21px;cursor:pointer;background-color:#30363e}
+.DownButton_Disabled{background-image:url(../images/DownButton_Disabled.gif);border:none;width:21px;height:21px;cursor:pointer;background-color:#30363e}
+.UpButton{background-image:url(../images/UpButton.gif);border:none;width:21px;height:21px;cursor:pointer;background-color:#30363e}
+.UpButton_Disabled{background-image:url(../images/UpButton_Disabled.gif);border:none;width:21px;height:21px;cursor:pointer;background-color:#30363e}
+.PagingContainer input,.PagingContainer select{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#2e343b;margin-left:5px}
+.ListingsTable th strong,.SubListingsTable th strong{color:#e20a16}
+.Panel h2,.LastPanel h2{font-size:14px;margin:0;padding:0}
+
+/* Editor Styles*/
+
+.ListingsTable .Editor thead th{background-color:none;color:#000;text-transform:none;font-style:normal;background-image:none;}
+.ListingsTabl .Editore thead td{background-color:none;color:#000;text-transform:none;padding-left:0px;border-left:none;font-weight:normal;font-style:normal;background-image:none;}
+.ListingsTable .Editor th{text-align:left;border-bottom:none;padding-top:0px;padding-bottom:0px;vertical-align:top}
+.ListingsTable .Editor td{padding-left:0px;border-bottom:none; border-left:none; padding-right:0px}

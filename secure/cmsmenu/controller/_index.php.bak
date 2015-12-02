@@ -1,0 +1,1039 @@
+<?php
+include_once '../../libraries/config.php';
+
+/**
+* @property db $db
+* @property sessionWorks $ses
+* @property generalWorks $gw
+*
+*/
+class cmsMenu extends controller
+{
+    public $i_menusectionid = 1; // menu group id (e.g. Portal menu & Sub menu)
+    private $i_MenuLevels   = 4; // How many Main Menus ( if == 3 then 4 levels with subs)
+	public $sitemodules = null;
+
+    function cmsMenu()
+    {
+        parent::controller();
+        //(init) Menu Section ID Request
+        isset($_REQUEST['MenuSectionID'])&&is_numeric($_REQUEST['MenuSectionID'])
+            ? $this->i_menusectionid = (int)$_REQUEST['MenuSectionID']
+            : (isset($_SESSION['MenuSectionID'])&&is_numeric($_SESSION['MenuSectionID']) 
+					? $this->i_menusectionid = $_SESSION['MenuSectionID'] 
+					: $this->i_menusectionid = 1 );
+			
+        $_SESSION['MenuSectionID'] = $this->i_menusectionid;
+
+        $this->loadLibrary("gw", "generalWorks", "generalworks.php");
+        $this->loadLibrary("mw", "menuWorks", "menuworks.php",array('siteid'=>$this->site->siteid));
+		include "../../globalrelated.php";
+		$this->sitemodules = $sitemodules[$this->site->siteid];
+    }
+
+    function index()
+    {
+        //(init) Main Menu ID
+        isset($_REQUEST['MainMenuID'])&&is_numeric($_REQUEST['MainMenuID'])
+            ? $i_mainmenuid = (int)$_REQUEST['MainMenuID']
+            : $i_mainmenuid = 'NULL';
+
+        if(!empty($_REQUEST['generateFeMenu']))
+            $this->generateFeMenu();
+
+        if (isset($_REQUEST["Posted"])&&$_REQUEST["Posted"] == "Y")
+		{
+            $this->mw->addMenuItem($_REQUEST['MenuName'], $this->i_menusectionid, $i_mainmenuid);
+			$this->ses->redirect("index.php?MenuSectionID=".$this->i_menusectionid,"refresh");
+		}
+
+        if(!empty($_REQUEST['getMoveMenu']))
+            $this->getMoveMenu($_REQUEST['getMoveMenu']);
+
+        if(!empty($_REQUEST['method']) && $_REQUEST['method']=='attachFile')
+            $this->attachFile();
+
+        if(!empty($_REQUEST['method']) && $_REQUEST['method']=='unattachFile')
+            $this->unattachFile();
+
+        if(!empty($_REQUEST['saveChanges']))
+            $this->saveChanges();
+        
+        return $this->getData();
+    }
+
+    function getData()
+    {
+        //(init) variables for index function
+        $data  = array();
+        $data['baseurl'] = $this->baseurl;              
+
+        // get level one menu
+        $obj_query = $this->_getMenu();
+		
+		$jsarrays = array();
+		$modules = $this->sitemodules;
+		foreach($modules as $name=>$module)
+		{
+			$tmparray = array();
+			$sql = "SELECT ".$module['id']." as 'id', ".$module['title']." as 'title' FROM ".$module['table']." WHERE siteid = ".$this->site->siteid." ORDER BY ".$module['title'];
+			$rs = $this->db->query($sql);
+			if(!empty($rs)) 
+			{
+				foreach($rs->result_array() as $row)
+					$tmparray[$row['id']] = $row['title'];
+					 
+				$jsarrays["attach".$name] = $this->gw->get_javascript_array($tmparray,'sel'.ucfirst($name));
+			}
+		}
+
+        //javascript url,pageid links
+        $array_linkvals = array();
+        $s_sql = "SELECT menuid, pageid, url, frame FROM cmsmenu";
+        $rs_query = $this->db->query($s_sql);
+        if(!empty($rs_query))
+        {
+            foreach($rs_query->result() as $row)
+            {
+				$tests = array('../','http://','https://','ftp://');
+				$outURL = '';
+				$prefix = '';
+				foreach($tests as $test) {
+					$pos = strpos($row->url,$test);
+					if($pos!==false) {
+						switch($test) {
+							case 'http://':
+								$prefix = 'http';
+								break;
+							case 'https://';
+								$prefix = 'https';
+								break;
+							case 'ftp://';
+								$prefix = 'ftp';
+								break;
+							default:
+								$prefix = 'internal';									
+						}
+						$outURL = str_ireplace($test,'',$row->url);
+					}
+				}
+                $array_linkvals[$row->menuid]=array('pageid'=>$row->pageid,'url'=>$outURL,'frame'=>$row->frame,'prefix'=>$prefix);
+            }
+        }
+        $data['linkarray'] = $this->gw->get_javascript_array($array_linkvals, 'linkarr');
+
+        $data['jsarrays'] = $jsarrays;
+        $data['obj_query']  = $obj_query;
+        $data['obj_ddmenu'] = $this->_getDDMenu($obj_query,0,null,null,$this->i_MenuLevels);
+        $data['controller'] = $this;
+
+        return $data;
+    }
+
+    function _getDDMenu($obj_query,$level=0,$exclude=null,$allowedlevels=null,$maxlevel=null)
+    {
+        $s_output = '';
+        if($maxlevel == $level && !is_null($maxlevel)) return $s_output;
+        if($allowedlevels != 3)
+        {
+            if (!empty($obj_query))
+            {
+                if(!is_null($exclude) && $level>0)
+                {
+                    $s_output .= '[';
+                }
+                foreach($obj_query as $row)
+                {
+                    if($row->menuid == $exclude) continue;
+
+                    $spaces = '';
+                    for($i=0;$i<=($level*4);$i++)
+                    {
+                        $spaces .= "&nbsp;";
+                    }
+                    if(!is_null($exclude))
+                    {
+                        $s_output .= "$row->menuid|$row->menuname";
+                    }
+                    else
+                    {
+                        $s_output .= "<option value=\"$row->menuid\">&nbsp;$spaces&#8227;&nbsp;&nbsp;$row->menuname</option>";
+                    }
+
+                    $rs_subquery = $this->_getMenu($row->menuid);
+                    if((!is_null($allowedlevels) && $allowedlevels == 1) || (!is_null($allowedlevels) && $allowedlevels != 2) || (is_null($allowedlevels)))
+                    {
+                        $s_output   .= $this->_getDDMenu($rs_subquery,$level+1,$exclude,$allowedlevels,$maxlevel);
+                    }
+
+                    if(!is_null($exclude))
+                    {
+                        if($level>0) $s_output .= ".";
+                        else $s_output .= ",";
+                    }
+                }
+                if(!is_null($exclude))
+                {
+                    $s_output = substr($s_output,0,-1);
+                    if($level>0) $s_output .= ']';
+                }
+            }
+
+            if(!is_null($exclude))
+            {
+                $s_output = substr($s_output,0,-1);
+            }
+        }
+        return $s_output;
+    }
+
+    function getMoveMenu($id=null)
+    {
+        $rs_query = $this->_getMenu();
+        $allowedLevels = $this->_getMenuLevels($id);
+        $returnval = $this->_getDDMenu($rs_query, 0, $id, $allowedLevels);
+
+        unset($rs_query);
+        echo "$returnval";
+
+        die();
+    }
+
+    function _getMenuLevels($id)
+    {
+        $levels = 0;
+
+        $rs_query = $this->db->query("SELECT menuid FROM cmsmenu WHERE menuid = $id");
+        if(!empty($rs_query))
+        {
+            $levels = 1;
+            $rs_squery = $this->db->query("SELECT menuid FROM cmsmenu WHERE mainmenuid = $id");
+            if(!empty($rs_squery))
+            {
+                $levels = 2;
+                $row = $rs_squery->row();
+                $rs_ssquery = $this->db->query("SELECT menuid FROM cmsmenu WHERE mainmenuid = $row->menuid");
+                if(!empty($rs_ssquery))
+                {
+                    $levels = 3;
+                }
+            }
+
+        }
+        return $levels;
+    }
+
+    function _getMenu($i_menuid=null)
+    {
+        if(is_null($i_menuid)) $s_mainmenuid = "AND mainmenuid IS NULL";
+        else $s_mainmenuid = "AND mainmenuid = $i_menuid";
+       
+		$s_sql = "
+			(
+                SELECT tbl1.*, 1 AS 'Subs', NULL as 'heading'
+                FROM cmsmenu tbl1
+                WHERE menusectionid = {$this->i_menusectionid}
+				AND tbl1.siteid = ".$this->site->siteid."
+                $s_mainmenuid
+                AND MenuID IN (SELECT DISTINCT mainmenuid
+                       FROM cmsmenu
+                       WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid IS NOT NULL
+                )
+            )
+            UNION
+            (
+                SELECT tbl1.*, 0 AS 'Subs', NULL as 'heading'
+                FROM cmsmenu tbl1
+                WHERE menusectionid = {$this->i_menusectionid}
+				AND tbl1.siteid = ".$this->site->siteid."
+                $s_mainmenuid
+                AND menuid NOT IN (SELECT DISTINCT mainmenuid
+                           FROM cmsmenu
+                           WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid IS NOT NULL
+                )
+            )
+            ORDER BY MenuOrder
+		";		
+		$result = $this->db->query($s_sql);
+		if(!empty($result))
+		{
+			$result = $result->result();
+			foreach($result as $key=>$row)
+			{
+
+				if(!empty($row->linktype)) {
+					$querybuilder = $this->sitemodules[$row->linktype];
+					if(!empty($querybuilder) && !empty($row->pageid)){
+						$sql = "SELECT ".$querybuilder['title']." as 'heading' FROM ".$querybuilder['table']." WHERE siteid = ".$this->site->siteid." AND ".$querybuilder['id']." = ".$row->pageid." LIMIT 1";
+						$rs = $this->db->query($sql);
+						if(!empty($rs)) {
+							$rsTitle = $rs->row();
+							$result[$key]->heading = $rsTitle->heading;
+						}
+					}
+				}
+			}
+		}
+        return $result;
+    }
+
+    function _getTextAndButton($pageid, $frame, $url, $heading, $parent, $menuid, $typelink)
+    {
+        $b_editpage = 0;
+        $b_previewpage = 0;
+        $s_linktext = '';
+        $s_linkbutton = '';
+        $s_editbtn = '';
+
+        !empty($typelink) ? $typelink = $typelink : $typelink = 'external';
+
+        // Link Button
+        if(!$parent)
+        {
+            $s_linkbutton = "<input type=\"button\" value=\"Link\" class=\"RedButton\" onclick=\"\$('#linkid').attr('value','$menuid');\$('#typelink').attr('value','$typelink');\$('#dialog-form').dialog('open');\"/>";
+        }
+
+        // Link Text
+        if(is_null($pageid) && is_null($url) && !$parent)
+        {
+            $b_editpage = 0;
+            $s_linktext = "<div class=\"NotificationText\">Not Linked</div>";
+        }
+        elseif(!is_null($url))
+        {
+			$outURL = str_ireplace("http://","",$url);
+			$outURL = str_ireplace("https://","",$outURL);
+			$outURL = str_ireplace("ftp://","",$outURL);
+			$outURL = str_ireplace("../","",$outURL);
+            $b_editpage = 0;
+            $s_linktext = "<div class=\"LimitWidth\">Linked to: <em>$outURL</em></div>";
+            $b_previewpage = 1;
+            $url = "http://$url";
+        }
+        elseif(!is_null($pageid))
+        {
+            $s_linktext = "<div class=\"LimitWidth\">Linked to: <em>$heading</em></div>";
+            $b_editpage = 1;
+            $b_previewpage = 1;
+            if($typelink == 'page') $url = str_replace('secure/','',$this->baseurl."content/$pageid");
+            elseif($typelink == 'news') $url = str_replace('secure/','',$this->baseurl."news/$pageid");
+        }
+        // Edit Button
+        if($b_editpage)
+        {
+            $s_editlink = '';
+            if($typelink == 'page') $s_editlink = $this->baseurl."cmspage/edit.php?id=$pageid";
+            elseif($typelink == 'news') $s_editlink = $this->baseurl."cmsnews/edit.php?id=$pageid";
+
+            $s_editbtn = "<input type=\"button\" value=\"Edit Page\" class=\"Button\" onclick=\"javascript:window.open('$s_editlink','$frame');\" style=\"width:80px\" />";
+        }
+        elseif(!$parent)
+        {
+            $s_editlink = $this->baseurl."cmspage/add.php?menuid=$menuid";
+            if(is_null($pageid) && is_null($url)) {
+                $s_editbtn = "<input type=\"button\" value=\"Add Page\" class=\"Button\" onclick=\"javascript:window.open('$s_editlink','_self');\" style=\"width:80px\" />";
+            }
+            else
+            {
+                $s_editbtn = "&nbsp;";
+            }
+
+        }
+        // Preview Button
+        if($b_previewpage)
+        {
+            $s_previewbtn = "<input type=\"button\" value=\"Preview Page\" class=\"Button\" onclick=\"javascript:window.open('$url','_blank','');\" style=\"width:100px\" />";
+        }
+        else
+        {
+            $s_previewbtn ="&nbsp;";
+        }
+
+        return array('linkbutton'=>$s_linkbutton,'link'=>$s_linktext,'edit'=>$s_editbtn,'preview'=>$s_previewbtn);
+    }
+
+    function attachFile()
+    {
+        !empty($_REQUEST['linkto'])         ? $linkto   = $_REQUEST['linkto']       : $linkto   = NULL;
+        !empty($_REQUEST['linktype'])       ? $linktype = $_REQUEST['linktype']     : $linktype = NULL;
+		!empty($_REQUEST['extPrefix'])   	? $extPrefix  = $_REQUEST['extPrefix'] 	: $extPrefix  = NULL;
+        !empty($_REQUEST['externallink'])   ? $extlink  = $_REQUEST['externallink'] : $extlink  = NULL;
+        !empty($_REQUEST['targetframe'])    ? $frame    = $_REQUEST['targetframe']  : $frame    = NULL;
+        !empty($_REQUEST['otherframe'])     ? $othframe = $_REQUEST['otherframe']   : $othframe = NULL;
+        !empty($_REQUEST['linkid'])         ? $linkid   = $_REQUEST['linkid']       : $linkid   = NULL;
+
+        $fail = false;
+        $s_params = '';
+
+        if(!is_null($linkid))
+        {
+            // did they select external link?
+            if($linktype=='external')
+            {
+                    // did they supply an external link?
+                    if(!is_null($extlink))
+                    {
+						$extlink = str_ireplace("http://","",$extlink);
+						$extlink = str_ireplace("https://","",$extlink);
+						$extlink = str_ireplace("ftp://","",$extlink);
+						$extlink = str_ireplace("../","",$extlink);
+						switch($extPrefix) {
+							case 'http':
+								$prefix = 'http://';								
+								break;
+							case 'https':
+								$prefix = 'https://';
+								break;
+							case 'ftp':
+								$prefix = 'ftp://';
+								break;
+							default :
+								$prefix = '../';
+						}
+                        $s_params .= "url = ".$this->db->escapeStr($prefix.$extlink).", pageid = NULL, linktype = NULL";
+                    }
+                    else $fail = true;
+            }
+            else
+            {
+				foreach($this->sitemodules as $modName=>$module) {
+					if($linktype == $modName) {
+						if($linkto!='none')
+						{
+							$s_params .= "url = NULL, pageid = $linkto, linktype = '".$modName."'";
+						}
+					}
+				}
+			}
+
+            // did they select other frame?
+            if(is_null($frame))
+            {
+                // did they supply the other frame?
+                if(!is_null($othframe))
+                {
+                    $s_params .= ", frame = {$this->db->escapeStr($othframe)}";
+                }
+                else $fail = true;
+            }
+            elseif($frame!='none')
+            {
+                $s_params .= ", frame = {$this->db->escapeStr($frame)}";
+            }
+            else $fail = true;
+
+        }
+        else $fail = true;
+
+        // did they fail to fill in the form?
+        if($fail)
+        {
+            
+        }
+        else
+        {
+            $s_sql = "UPDATE cmsmenu SET $s_params WHERE menuid = $linkid";
+            $this->db->query($s_sql);
+            //$this->gw->auditLog(__FILE__, __LINE__, $s_sql, $linkid);
+        }
+    }
+
+    function unattachFile()
+    {
+        !empty($_REQUEST['linkid']) ? $linkid = $_REQUEST['linkid'] : $linkid = NULL;
+
+        $s_params = "";
+
+        if(!is_null($linkid))
+        {
+            $s_params = "pageid = NULL, url = NULL, frame = NULL, linktype = NULL";
+        }
+        else $fail = true;
+
+        // did they fail to fill in the form?
+        if($fail)
+        {
+
+        }
+        else
+        {
+            $s_sql = "UPDATE cmsmenu SET $s_params WHERE menuid = $linkid";
+            $this->db->query($s_sql);
+        }
+    }
+	
+	function buildSubArray($mainid)
+	{		
+		$sub_array = array();
+	
+		$s_sql = "SELECT menuid, menuorder, menuname FROM cmsmenu WHERE mainmenuid = $mainid AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid." ORDER BY menuorder";
+		$rs_query = $this->db->query($s_sql);
+		if(!empty($rs_query))
+		{
+			foreach($rs_query->result() as $row)
+			{
+				!empty($_REQUEST["MenuOrder_{$row->menuid}"]) ? $menuorder = $_REQUEST["MenuOrder_{$row->menuid}"] : $menuorder = '';
+				if($menuorder=='') continue;
+				$temp = array(
+					'title'=>$row->menuname,
+					'oldOrder'=>$row->menuorder,
+					'newOrder'=>$menuorder,
+					'menuid'=>$row->menuid,
+					'submenus'=>$this->buildSubArray($row->menuid)
+				);
+				$sub_array[$row->menuid] = $temp;
+			}
+		}
+		return $sub_array;        
+	}
+	
+	function insertOrderDB($menus)
+	{
+		//echo "<pre>".print_r($menus,true)."</pre>";
+		foreach($menus as $menuID=>$menuArr)	
+		{
+			if (!empty($menuArr['submenus'])) $this->insertOrderDB($menuArr['submenus']);
+			
+			if ($menuArr['oldOrder'] != $menuArr['newOrder'])	
+			{
+				$s_sql = "UPDATE cmsmenu SET menuorder = ".$menuArr['newOrder']." WHERE menuid = ".$menuArr['menuid'];
+                $this->db->query($s_sql);
+			}
+		}
+	}
+	
+	function updateConsecutiveSubs($mainid)
+	{
+		$s_sql = "SELECT menuid FROM cmsmenu WHERE mainmenuid = $mainid ORDER BY menuorder";
+		$rs = $this->db->query($s_sql);
+		if(!empty($rs))
+		{
+			$arrTest = $rs->result_array();
+			foreach($arrTest as $key=>$val)
+			{
+				$suborderid = $key+1;
+				$submenuid  = $val['menuid'];
+
+				$s_sql = "UPDATE cmsmenu SET menuorder = $suborderid WHERE menuid = $submenuid AND menusectionid = {$this->i_menusectionid}";
+				$this->db->query($s_sql);
+				
+				$this->updateConsecutiveSubs($submenuid);
+			}
+		}	
+	}
+
+    function saveChanges()
+    {
+        // =====================================================================
+        // Rename Headers
+        // =====================================================================
+        $s_sql = "SELECT menuid FROM cmsmenu WHERE menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid;
+        $rs_query = $this->db->query($s_sql);
+        if(!empty($rs_query))
+        {
+            foreach($rs_query->result() as $row)
+            {
+                !empty($_REQUEST["header_{$row->menuid}"]) ? $header = $_REQUEST["header_{$row->menuid}"] : $header = '';
+                if($header=='') continue;
+                $header = $this->db->escapeStr($header);
+                $s_sql = "UPDATE cmsmenu SET menuname = $header WHERE menuid = {$row->menuid}";
+                $this->db->query($s_sql);
+            }
+        }
+
+        // =====================================================================
+        // Reorder
+        // =====================================================================
+
+        // build root menu array
+        $array_menu = array();
+        $s_sql = "SELECT menuid, menuorder, menuname FROM cmsmenu WHERE mainmenuid is null AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid." ORDER BY menuorder";
+        $rs_query = $this->db->query($s_sql);
+        if(!empty($rs_query))
+        {
+            foreach($rs_query->result() as $row)
+            {
+                !empty($_REQUEST["MenuOrder_{$row->menuid}"]) ? $menuorder = $_REQUEST["MenuOrder_{$row->menuid}"] : $menuorder = '';
+                if($menuorder=='') continue;
+                $array_menu[$row->menuid] = array(
+					'title'=>$row->menuname,
+					'oldOrder'=>$row->menuorder,
+					'newOrder'=>$menuorder,
+					'menuid'=>$row->menuid,
+					'submenus'=>$this->buildSubArray($row->menuid)
+				);
+            }
+        }
+		
+        // update database
+		if (!empty($array_menu)) $this->insertOrderDB($array_menu);		
+
+        // order consecutive from 1
+        $s_sql = "SELECT menuid FROM cmsmenu WHERE mainmenuid IS NULL AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid." ORDER BY menuorder";
+        $rs_menu = $this->db->query($s_sql);
+        if(!empty($rs_menu))
+        {
+            $array_test = $rs_menu->result_array();
+
+            foreach($array_test as $key=>$val)
+            {
+                $orderid = $key+1;
+                $menuid  = $val['menuid'];
+
+                $s_sql = "UPDATE cmsmenu SET menuorder = $orderid WHERE menuid = $menuid AND menusectionid = {$this->i_menusectionid}";
+                $this->db->query($s_sql);
+
+				$this->updateConsecutiveSubs($menuid);
+            }
+        }
+
+        // =====================================================================
+        // Deleting
+        // =====================================================================
+        !empty($_REQUEST['SaveItems']) ? $dosave = $_REQUEST['SaveItems'] : $dosave = 'N';
+        !empty($_REQUEST['MoveItems']) ? $domove = $_REQUEST['MoveItems'] : $domove = 'N';
+        if($dosave!='Y'&&$domove!='Y')
+        {
+            !empty($_REQUEST['menuids']) ? $menuids = $_REQUEST['menuids'] : $menuids = null;
+            if(!is_null($menuids) && $menuids != '')
+            {
+                // get selected items
+                $deleteids = '';
+                $array_menuids = explode(",",$menuids);
+                foreach($array_menuids as $key=>$val)
+                {
+                    !empty($_REQUEST["delete_$val"]) ? $temp = $_REQUEST["delete_$val"] : $temp = null;
+                    if(!is_null($temp) || (is_numeric($temp))) 
+					{
+						//get parent ids and update menu order
+						$array_parentids = $this->_updateParentOrder($temp);
+		
+						//die();
+						// remove selected items
+						$s_sql = "DELETE FROM cmsmenu WHERE menuid = $temp AND siteid = ".$this->site->siteid;
+						$this->db->query($s_sql);
+						
+						// if parent doesn't have children anymore -- make it non-parent
+						$this->_updateParentStatus($array_parentids);						
+					}
+                }
+
+            }
+        }
+
+        // =====================================================================
+        // moving items
+        // =====================================================================
+        if($domove == 'Y')
+        {
+
+            !empty($_REQUEST['MoveMainMenuID']) ? $mainmenuid = $_REQUEST['MoveMainMenuID'] : $mainmenuid = null;
+            !empty($_REQUEST['menuids']) ? $menuids = $_REQUEST['menuids'] : $menuids = null;
+            if(!is_null($menuids) && $menuids != '')
+            {
+                //echo "<br/>menuids not null and not blank: $menuids<br/>";
+                // get selected items
+                $allmenus = '';
+                $array_menuids = explode(",",$menuids);
+                foreach($array_menuids as $key=>$val)
+                {
+                    !empty($_REQUEST["delete_$val"]) ? $temp = $_REQUEST["delete_$val"] : $temp = null;
+                    if(!is_null($temp)) $allmenus .= $temp.',';
+                }
+                $allmenus = substr($allmenus,0,-1);
+
+                //get order (the last number)
+                if (is_null($mainmenuid))
+				{
+                    //echo "<br/>mainmenuid is null<br/>";
+                    $s_sql = " SELECT COUNT(menuid) AS 'TheCount' FROM cmsmenu WHERE menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid." AND mainmenuid IS NULL";
+                }
+                else
+                {
+                    //echo "<br/>mainmenuid is not null : $mainmenuid<br/>";
+                    $s_sql = "UPDATE cmsmenu SET PageID = NULL, frame = NULL, isparent = 1 WHERE menuid = $mainmenuid AND siteid = ".$this->site->siteid;
+                    $this->db->query($s_sql);
+                    //if(mysql_affected_rows() > 0) //$this->gw->auditLog(__FILE__, __LINE__, $s_sql, $mainmenuid);
+
+                    $s_sql = "SELECT COUNT(menuid) AS 'TheCount' FROM cmsmenu WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid = $mainmenuid AND siteid = ".$this->site->siteid;
+                }
+                $rs_count = $this->db->query($s_sql);
+
+                $i_startcount = 0;
+                if(!empty($rs_count)) {
+                    $row = $rs_count->row();
+                    $i_startcount = $row->TheCount;
+                }
+
+                // get all the menus that are being moved -- then move them to the specified menu
+                //echo "<br/>menus to be moved: $allmenus<br/>";
+                $i_count = 1;
+                $arr_menus = explode(",",$allmenus);
+                $array_parentids = $this->_updateParentOrder($allmenus);
+                foreach($arr_menus as $key=>$val) {
+
+                    (int)$i_menuid = $val;
+
+                    $rs_test = $this->db->query("SELECT 1 FROM cmsmenu WHERE mainmenuid IS NULL AND menuid = $i_menuid AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid);
+                    if(!empty($rs_test))
+                    {
+                        //echo "<br/>rs_test evaluated > 0<br/>";
+                        $s_sql = "UPDATE cmsmenu SET menuorder = menuorder - 1 WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid IS NULL AND menuorder > (SELECT 'menuorder' FROM (SELECT menuorder FROM cmsmenu WHERE menuid = $i_menuid) AS menuorder)";
+                    }
+                    else
+                    {
+                        //echo "<br/>rs_test did not evaluated > 0<br/>";
+                        $s_sql = "UPDATE cmsmenu SET menuorder = menuorder - 1 WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid = (SELECT 'mainmenuid' FROM (SELECT mainmenuid FROM cmsmenu WHERE menuid = $i_menuid) AS mainmenuid) AND menuorder > (SELECT 'menuorder' FROM (SELECT menuorder FROM cmsmenu WHERE menuid = $i_menuid) AS menuorder)";
+                    }
+                    $this->db->query($s_sql);
+
+                    if(is_null($mainmenuid)) $newmainmenuid = 'NULL';
+                    else $newmainmenuid = $mainmenuid;
+                    $s_sql = "UPDATE cmsmenu SET mainmenuid = $newmainmenuid, menuorder = ".(string)($i_startcount + $i_count)." WHERE menuid = $i_menuid";
+                    $this->db->query($s_sql);
+                    //if(mysql_affected_rows() > 0) //$this->gw->auditLog(__FILE__, __LINE__, $s_sql, $i_menuid);
+
+                    $i_count++;
+                }
+                $this->_updateParentStatus($array_parentids);
+            }
+        }
+
+    }
+
+    function _updateParentOrder($items)
+    {
+        //echo "<br/>items being moved: $items<br/>";
+        //get parent ids and update menu order
+        $s_sql = "SELECT menuid, mainmenuid FROM cmsmenu WHERE menuid IN ($items) AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid;
+        $rs_query = $this->db->query($s_sql);
+        if(!empty($rs_query))
+        {
+            $parentids = '';
+            foreach($rs_query->result() as $row)
+            {
+                if(!is_null($row->mainmenuid))
+                {
+                    $parentids .= $row->mainmenuid.',';
+                    $s_sql = "UPDATE cmsmenu SET menuorder = menuorder-1 WHERE mainmenuid = {$row->mainmenuid} AND menuorder > (SELECT menuorder FROM (SELECT menuid, menuorder FROM cmsmenu) AS X WHERE menuid = {$row->menuid}) AND menusectionid = {$this->i_menusectionid}";
+                }
+                else $s_sql = "UPDATE cmsmenu SET menuorder = menuorder-1 WHERE mainmenuid IS NULL AND menuorder > (SELECT menuorder FROM (SELECT menuid, menuorder FROM cmsmenu) AS X WHERE menuid = {$row->menuid}) AND menusectionid = {$this->i_menusectionid}";
+
+                $this->db->query($s_sql);
+
+            }
+            $parentids = substr($parentids,0,-1);
+        }
+        return $array_parentids = explode(",", $parentids);
+    }
+
+    function _updateParentStatus($array_parentids)
+    {
+
+        // if parent doesn't have children anymore -- make it non-parent
+        foreach($array_parentids as $key=>$id)
+        {
+            if(!empty($id))
+            {
+                $s_sql = "SELECT menuid FROM cmsmenu WHERE mainmenuid = $id AND menusectionid = {$this->i_menusectionid} AND siteid = ".$this->site->siteid;
+                $rs_pquery = $this->db->query($s_sql);
+                if(empty($rs_pquery))
+                {
+
+                    $s_sql = "UPDATE cmsmenu SET isparent = 0 WHERE menuid = $id";
+                    $this->db->query($s_sql);
+                }
+            }
+        }
+    }
+
+    function _getFeMenuSQL($s_mainmenuid=null)
+    {
+        is_null($s_mainmenuid) ? $s_mainmenuid = 'AND mainmenuid IS NULL' : $s_mainmenuid = "AND mainmenuid = $s_mainmenuid";
+
+        $s_sql = "
+            (
+                SELECT tbl1.*, 1 AS 'Subs', NULL as 'permalink', NULL as 'friendlytitle'
+                FROM cmsmenu tbl1
+                WHERE menusectionid = {$this->i_menusectionid}
+                $s_mainmenuid
+				AND tbl1.siteid = ".$this->site->siteid."
+                AND MenuID IN (SELECT DISTINCT mainmenuid
+                       FROM cmsmenu
+                       WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid IS NOT NULL
+                )
+            )
+            UNION
+            (
+                SELECT tbl1.*, 0 AS 'Subs', NULL as 'permalink', NULL as 'friendlytitle'
+                FROM cmsmenu tbl1
+                WHERE menusectionid = {$this->i_menusectionid}
+                $s_mainmenuid
+				AND tbl1.siteid = ".$this->site->siteid."
+                AND menuid NOT IN (SELECT DISTINCT mainmenuid
+                           FROM cmsmenu
+                           WHERE menusectionid = {$this->i_menusectionid} AND mainmenuid IS NOT NULL
+                )
+            )
+            ORDER BY MenuOrder
+        ";
+        $result = $this->db->query($s_sql);
+		if(!empty($result))
+		{
+			$result = $result->result();
+			foreach($result as $key=>$row)
+			{
+				if(!empty($row->linktype) && !empty($row->pageid) ) {
+					$querybuilder = $this->sitemodules[$row->linktype];
+					$sql = "
+						SELECT tbl2.permalink,tbl2.friendlytitle 
+						FROM ".$querybuilder['table']." tbl1
+						LEFT JOIN permalinks tbl2 on tbl1.".$querybuilder['id']." = tbl2.typeid and tbl2.type = '".$row->linktype."'
+						WHERE tbl1.siteid = ".$this->site->siteid." AND tbl1.".$querybuilder['id']." = ".$row->pageid." 
+						LIMIT 1";
+					$rs = $this->db->query($sql);
+					if(!empty($rs)) {
+						$rsTitle = $rs->row();
+						$result[$key]->permalink     = $rsTitle->permalink;
+						$result[$key]->friendlytitle = $rsTitle->friendlytitle;
+					}
+				}
+			}
+		}
+		return $result;
+    }
+	
+    function generateLevel($menuid=null)
+    {
+        //get Level one menu
+        $query = $this->_getFeMenuSQL($menuid);
+        if(!empty($query)) 
+		{	
+			// htaccess map
+			$map_output = "";
+
+			// menu
+            !is_null($menuid) ? $s_output = "<ul style=\"display: none; visibility: hidden;\">\r\n" : $s_output = "<ul style=\"display: block;\">\r\n";
+            foreach($query as $row) {
+				$type = $this->sitemodules[$row->linktype]['link'];
+				$presite = $this->site->getSiteUrl($row->siteid);
+
+                if(!empty($row->permalink))
+                    $link = $presite.'/'.$row->permalink;
+				elseif(!empty($row->friendlytitle))
+					$link = $presite."/".$type.$row->friendlytitle;
+                elseif(!empty($row->pageid))
+                    $link = $presite.'/'.$type.$row->pageid;
+                elseif(!empty($row->url))
+                    $link = $row->url;
+				else
+                    $link = "javascript:;";
+					
+                $s_output .= "<li>\r\n";
+				
+				$href = $link=="javascript:;" ? "style=\"cursor:hand;cursor:pointer;\"" : "href=\"$link\" target='$row->frame'";	
+				
+
+				if(is_null($menuid))
+				{	
+					$s_output .= "<a $href class=\"top\">$row->menuname</a>\r\n";
+					$s_output .= $this->generateLevel($row->menuid);
+				}
+				else
+				{
+					if($row->Subs==1)
+					{
+						$s_output .= "<a $href class=\"parent\">$row->menuname</a>\r\n";
+						$s_output .= $this->generateLevel($row->menuid);
+					}
+					else
+					{
+						$s_output .= "<a $href >$row->menuname</a>\r\n";
+					}
+				}
+                $s_output .= "</li>\r\n";
+            }
+            $s_output .= "</ul>\r\n";
+        }
+        return $s_output;
+    }
+
+	/*
+    function generateFeMenu()
+    {
+		$s_output = $this->generateLevel();		
+        $fh = fopen("../../content/menu_".$this->site->siteid."_".$this->i_menusectionid.".php", "w");
+        $bytes = fwrite($fh, $s_output);
+        fclose($fh);
+
+        if(!$bytes)
+            echo 0;
+        else
+            echo 1;
+        
+        die();
+    }
+	*/
+	
+	
+	function generateFeMenu()
+    {
+        //$this->generateStorePermalinks();
+        //$this->generatePermalinks();
+		$s_output = $this->generateLevel();		
+		
+		if ($this->i_menusectionid ==1)
+		{
+			$s_output = $this->generateLevel();	
+	        $fh = fopen("../../content/menu_".$this->site->siteid."_".$this->i_menusectionid.".php", "w");
+		}
+		else
+		{
+
+			$s_output = $this->generateMobileLevel();
+			//$s_output = str_replace("/content/","/mobi/content/",$s_output);
+			$s_output = str_replace('<ul class="sf-menu">','',$s_output);
+			$s_output = str_replace('</ul>','',$s_output);			
+			$s_output = str_replace('<li>','',$s_output);						
+			$s_output = str_replace('</li>','',$s_output);
+			$s_output = str_replace('</div>','',$s_output);									
+	        $fh = fopen("../../mobile/menumobi.php", "w");		
+		}		
+		
+        $bytes = fwrite($fh, $s_output);
+        fclose($fh);
+
+        if(!$bytes)
+            echo 0;
+        else
+            echo 1;
+        
+        die();
+    }
+	
+	function generateMobileLevel($menuid=null,$level=1,$allowedLevels=2)
+    {
+		if ($level < $allowedLevels)
+		{
+			//get Level one menu
+			$query = $this->_getFeMenuSQL($menuid);
+
+			if(!empty($query)) 
+			{
+				
+				// htaccess map
+				$map_output = "";
+				
+				// menu
+				//!is_null($menuid) ? $s_output = "<ul>\r\n" : $s_output = "<ul class=\"sf-menu\">\r\n";
+				$qlength = count($query);
+				$i=0;
+				foreach($query as $row) {
+					$i++;
+					if($row->linktype=='page')
+						$type = 'content';
+					elseif($row->linktype=='news')
+						$type = 'article';
+					else
+						$type = '';
+					
+//					if(!empty($row->permalink) && !empty($row->pageid)) {
+//						$map_output .= "\r\nRewriteRule ^($row->permalink)	content/".str_replace('/','',$type).".php?id=".$row->pageid."";	
+//					}
+
+					//var_dump($row);
+/*
+					if(!empty($row->permalink))
+						$link = '../mobile/'.$row->permalink;
+*/						
+
+					
+					if(!empty($row->friendlytitle))
+						$link = '../mobile/'.$type.'/'.$row->friendlytitle;						
+					elseif(!empty($row->pageid))
+						$link = '../mobile/'.$type.'/'.$row->pageid;
+					elseif(!empty($row->url))
+						$link = $row->url;
+					else
+						$link = "#";
+						
+					echo "<br>"	.$link;
+						
+					//$s_output .= "<li>\r\n";
+					
+					$clss="";
+					if($i==$qlength) $clss= "class='last-child'";
+					
+					$href = $link=="#" ? "style=\"cursor:hand;cursor:pointer;\"" : "href=\"$link\"";				
+					
+					$s_output .= "<a $href target='$row->frame' ".$clss.">$row->menuname</a>";
+						
+						
+					//if($row->Subs==1) $s_output .= $this->generateLevel($row->menuid,$level+1,$allowedLevels);
+	
+
+				}
+				//$s_output .= "</ul>\r\n";
+			}
+		}
+        return $s_output;
+    }		
+	
+	function getSubMenus($id,$level=3)
+	{
+		if (!is_null($id) && is_numeric($id))
+		{
+			$sum = $level - 3;
+			$colWidth = 70 + (40 * $sum);
+			
+			$sub = $this->_getMenu($id);			
+			if(!empty($sub))
+			{
+				//var_dump($sub);
+				echo "
+				<tr>
+					<th colspan='8'>
+						<table border='0' cellspacing='0' cellpadding='0' class='SubListingsTable' style='border-bottom: 0px'>";
+			
+				foreach($sub as $row)
+				{
+					//$s_menuids .= $row->menuid.',';
+					$this->menuids .= $row->menuid.',';
+					$b_editpage = 0;
+					$b_previewpage = 0;
+					$s_linktext = '';
+			
+					echo "
+					<tr>
+						<th width=\"30\"><input type=\"checkbox\" name=\"delete_".$row->menuid."\" id=\"delete_".$row->menuid."\" value=\"".$row->menuid."\" /></th>
+						<th width=\"".$colWidth."\" style=\"text-align:right; vertical-align:middle;\"><img src=\"../images/SubLevelArrow.gif\" alt=\"\" /></th>
+						<th width=\"50\" style=\"text-align:center;\"><input type=\"text\" name=\"MenuOrder_".$row->menuid."\" id=\"MenuOrder_".$row->menuid."\" value=\"".$row->menuorder."\" style=\"width:30px;\" class=\"Textfield\" /></th>
+						<th><input type=\"text\" name=\"header_".$row->menuid."\" id=\"header_".$row->menuid."\" value=\"".$row->menuname."\" onfocus=\"javascript:this.className='LinkFieldEdit';\" onblur=\"javascript:this.className='LinkField';\" class=\"LinkField\" /></th>";
+			
+						$array_rowvals = $this->_getTextAndButton($row->pageid, $row->frame, $row->url, $row->heading, $row->isparent, $row->menuid, $row->linktype);
+			
+						echo "
+						<th width=\"60\">".$array_rowvals['linkbutton']."</th>
+						<th width=\"250\"><div class=\"NotificationText\">".$array_rowvals['link']."</div></th>
+						<th width=\"85\">".$array_rowvals['edit']."</th>
+						<th width=\"110\">".$array_rowvals['preview']."</th>
+					</tr>";
+					
+					
+					$this->getSubMenus($row->menuid,$level+1);
+			
+				}				
+				
+				echo "
+						</table>
+					</th>
+				</tr>";
+			
+			}	
+		}
+	}
+
+}
+$page = new cmsMenu();
+extract($page->index(),EXTR_OVERWRITE);
+?>

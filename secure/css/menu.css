@@ -1,0 +1,83 @@
+#nav {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0px;
+	width: ;
+	height: ;
+	list-style-type: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	/*background-color: #a9210f;*/
+}
+#nav + *{
+	clear: left;
+}
+#nav ul {
+	padding: 0;
+	margin:0;
+	list-style: none;
+	z-index:99;
+	position:absolute;
+	overflow:visible;
+}
+#nav li ul {
+	text-align: left;
+	width:230px;
+}
+#nav li {
+	margin: 0px;
+	float: left;
+	text-align: center;
+	overflow: visible;
+}
+#nav li li{
+	margin: 0px;
+	float: none;
+	text-align: left;
+	text-transform: none;
+}
+#nav a {
+	text-decoration: none;
+	color: #93969a;
+	padding-top: 14px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+}
+#nav li li a {
+	padding: 8px 10px 8px 20px;
+	width:230px;
+}
+#nav ul, #nav li, #nav a{
+	display: block;
+	margin:0px;
+}
+#nav ul{
+	visibility: hidden;
+}
+#nav a:hover {
+	background: #fff;
+	color: #878685;
+}
+#nav li:hover li a, #nav li ul li:hover li a{
+	background: #656d76;
+	color: #FFF;
+}
+#nav li:hover a {
+	background-image:url(../images/TabOverBG.gif);
+	background-repeat: repeat-x;
+	color:#FFF;
+}
+#nav li ul li:hover a{
+	background: #464e56;
+	color:#FFF;
+}
+#nav li:hover ul ul, #nav li:hover ul ul ul{
+	visibility: hidden;
+}
+
+#nav li:hover ul, #nav ul li:hover ul, #nav ul ul li:hover ul{
+	visibility: visible;
+}

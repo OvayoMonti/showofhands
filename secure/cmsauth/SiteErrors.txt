@@ -1,0 +1,9 @@
+=============================================
+	 Date: 01 January 1970 , Time: 2:00:00 
+=============================================
+Error Level: 8
+Error Message: Undefined index:  live
+Error File: /var/www/html/oicms/libraries/sessionworks.php
+Error Line: 40
+Error Context: Array
+

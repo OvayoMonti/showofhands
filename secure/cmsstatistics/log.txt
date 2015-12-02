@@ -1,0 +1,2970 @@
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+
+0frc0o50f12anheg8i9jkc5cm6
+Array
+(
+    [plain_beUser] => Array
+        (
+            [userid] => 1
+            [siteid] => 1
+            [username] => admin
+            [userlevel] => 0
+            [realname] => WebAdmin
+            [modules] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 1
+                            [1] => content
+                            [2] => cmspage,cmsmenu,cmstags
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 2
+                            [1] => news
+                            [2] => cmsnews
+                        )
+
+                    [2] => Array
+                        (
+                            [0] => 3
+                            [1] => galleries
+                            [2] => cmsgallery
+                        )
+
+                    [3] => Array
+                        (
+                            [0] => 4
+                            [1] => features
+                            [2] => cmsfeatures,cmssubfeatures
+                        )
+
+                    [4] => Array
+                        (
+                            [0] => 5
+                            [1] => enquiries
+                            [2] => cmsenquiries
+                        )
+
+                    [5] => Array
+                        (
+                            [0] => 6
+                            [1] => users
+                            [2] => cmsusers
+                        )
+
+                    [6] => Array
+                        (
+                            [0] => 7
+                            [1] => statistics
+                            [2] => cmsstatistics
+                        )
+
+                    [7] => Array
+                        (
+                            [0] => 8
+                            [1] => assets
+                            [2] => cmsassets
+                        )
+
+                    [8] => Array
+                        (
+                            [0] => 9
+                            [1] => signature images
+                            [2] => cmsheaders
+                        )
+
+                    [9] => Array
+                        (
+                            [0] => 10
+                            [1] => events
+                            [2] => cmsevents
+                        )
+
+                    [10] => Array
+                        (
+                            [0] => 11
+                            [1] => audit log
+                            [2] => cmsaudit
+                        )
+
+                    [11] => Array
+                        (
+                            [0] => 12
+                            [1] => doclib
+                            [2] => cmsdocuments
+                        )
+
+                    [12] => Array
+                        (
+                            [0] => 13
+                            [1] => social networks
+                            [2] => cmsnetworks
+                        )
+
+                    [13] => Array
+                        (
+                            [0] => 15
+                            [1] => categories
+                            [2] => categories
+                        )
+
+                    [14] => Array
+                        (
+                            [0] => 16
+                            [1] => products
+                            [2] => cmsproducts
+                        )
+
+                    [15] => Array
+                        (
+                            [0] => 17
+                            [1] => specials
+                            [2] => cmsspecials
+                        )
+
+                    [16] => Array
+                        (
+                            [0] => 18
+                            [1] => customers
+                            [2] => customers
+                        )
+
+                    [17] => Array
+                        (
+                            [0] => 19
+                            [1] => orders
+                            [2] => orders
+                        )
+
+                    [18] => Array
+                        (
+                            [0] => 20
+                            [1] => distributor
+                            [2] => distributor
+                        )
+
+                    [19] => Array
+                        (
+                            [0] => 21
+                            [1] => vouchers
+                            [2] => vouchers
+                        )
+
+                    [20] => Array
+                        (
+                            [0] => 22
+                            [1] => registries
+                            [2] => registries
+                        )
+
+                )
+
+        )
+
+)
+

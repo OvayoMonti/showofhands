@@ -1,0 +1,40 @@
+=============================================
+	 Date: 31August2015 , Time: 2-18-26 
+=============================================
+BASE URL: 			http://www.showofhands.dev/content/
+Error Level: 		8192
+Error Message: 		mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.
+Error File: 		C:\xampp1.8.3\htdocs\show-of-hands\libraries\dbi.php(1) : eval()'d code(1) : eval()'d code
+Error Line: 		279
+=============================================
+	 Date: 31August2015 , Time: 2-18-26 
+=============================================
+BASE URL: 			http://www.showofhands.dev/content/
+Error Level: 		8192
+Error Message: 		mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.
+Error File: 		C:\xampp1.8.3\htdocs\show-of-hands\libraries\dbi.php(1) : eval()'d code(1) : eval()'d code
+Error Line: 		279
+=============================================
+	 Date: 31August2015 , Time: 2-18-26 
+=============================================
+BASE URL: 			http://www.showofhands.dev/content/
+Error Level: 		8192
+Error Message: 		mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.
+Error File: 		C:\xampp1.8.3\htdocs\show-of-hands\libraries\dbi.php(1) : eval()'d code(1) : eval()'d code
+Error Line: 		279
+=============================================
+	 Date: 07September2015 , Time: 10-20-54 
+=============================================
+BASE URL: 			http://www.showofhands.dev/content/
+Error Level: 		8192
+Error Message: 		mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.
+Error File: 		C:\xampp1.8.3\htdocs\show-of-hands\libraries\dbi.php(1) : eval()'d code(1) : eval()'d code
+Error Line: 		279
+=============================================
+	 Date: 07September2015 , Time: 10-20-54 
+=============================================
+BASE URL: 			http://www.showofhands.dev/content/
+Error Level: 		8192
+Error Message: 		mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.
+Error File: 		C:\xampp1.8.3\htdocs\show-of-hands\libraries\dbi.php(1) : eval()'d code(1) : eval()'d code
+Error Line: 		279

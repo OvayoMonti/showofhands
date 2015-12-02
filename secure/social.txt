@@ -1,0 +1,295 @@
+
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:13:28 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?this_is_my_twitter_update!?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea5809900343@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea580990037b&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea580990037b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+--B_ALT_4ea580990037b
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+--B_ALT_4ea580990037b--</pre>
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:16:37 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?this_is_my_second_twiter_update!!?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea58155bbf94@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea58155bbfbf&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea58155bbfbf
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+--B_ALT_4ea58155bbfbf
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+--B_ALT_4ea58155bbfbf--</pre>
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+RESPONSE: {"errorCode": 0, "errorMessage": "", "results": {"http://www.mantiscollection.com/blogarticle.asp?id=77&categoryid=21": {"userHash": "pugXQe", "shortKeywordUrl": "", "hash": "oaR36S", "shortCNAMEUrl": "http://bit.ly/pugXQe", "shortUrl": "http://bit.ly/pugXQe"}}, "statusCode": "OK"}
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:49:59 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?It_is_with_great_excitement_that_I=e2=80=99d_like_to_announce_?=
+ =?utf-8?Q?to_all_of_you_that_we_have_signed_up_the_newly_refurbished_art?=
+ =?utf-8?Q?_deco_Marlin_Hotel_to_Mantis._We=e2=80=99re_also_going_to_faci?=
+ =?utf-8?Q?litate_the_hotel_with_their_pre-opening_arrangements_in_the_co?=
+ =?utf-8?Q?ming_weeks._The_Hotel_is_located_a_street_back_from_Miami_Sout?=
+ =?utf-8?Q?h_Beach_and_the_famous_Ocean_Drive.__http://bit.ly/pugXQe?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea5892a47ad4@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea5892a47b12&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea5892a47b12
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+--B_ALT_4ea5892a47b12
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+--B_ALT_4ea5892a47b12--</pre>
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+RESPONSE: {"errorCode": 0, "errorMessage": "", "results": {"http://www.mantiscollection.com/blogarticle.asp?id=77&categoryid=21": {"userHash": "pugXQe", "shortKeywordUrl": "", "hash": "oaR36S", "shortCNAMEUrl": "http://bit.ly/pugXQe", "shortUrl": "http://bit.ly/pugXQe"}}, "statusCode": "OK"}
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:51:38 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?The_iconic_Marlin_Hotel_joins_our_growing_portfolio._http://bi?=
+ =?utf-8?Q?t.ly/pugXQe?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea5898ce569f@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea5898ce56c9&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea5898ce56c9
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+--B_ALT_4ea5898ce56c9
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+--B_ALT_4ea5898ce56c9--</pre>
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+RESPONSE: {"errorCode": 0, "errorMessage": "", "results": {"http://www.mantiscollection.com/blogarticle.asp?id=77&categoryid=21": {"userHash": "pugXQe", "shortKeywordUrl": "", "hash": "oaR36S", "shortCNAMEUrl": "http://bit.ly/pugXQe", "shortUrl": "http://bit.ly/pugXQe"}}, "statusCode": "OK"}
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:52:48 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?The_iconic_Marlin_Hotel_joins_our_growing_portfolio!_http://bi?=
+ =?utf-8?Q?t.ly/pugXQe?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea589d285131@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea589d28515b&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea589d28515b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+--B_ALT_4ea589d28515b
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+--B_ALT_4ea589d28515b--</pre>
+=====================================
+BITLY User: onlineinnovations, API: R_ac15e9d58debfab3d5f7248f6bf61088
+=====================================
+RESPONSE: {"errorCode": 0, "errorMessage": "", "results": {"http://www.mantiscollection.com/blogarticle.asp?id=77&categoryid=21": {"userHash": "pugXQe", "shortKeywordUrl": "", "hash": "oaR36S", "shortCNAMEUrl": "http://bit.ly/pugXQe", "shortUrl": "http://bit.ly/pugXQe"}}, "statusCode": "OK"}
+=====================================
+<pre>hello: 250-inteldev.onlineinnovations.com Hello demo02.onlineinnovations.com, pleased to meet you
+250-ETRN
+250-AUTH=LOGIN
+250-AUTH LOGIN CRAM-MD5
+250-8BITMIME
+250 SIZE 0
+</pre><pre>from: 250 <no-reply@onlineinnovations.com>, Sender ok
+</pre><pre>to: 250 <3pmg66-rvg183@twittermail.com>, Recipient ok
+</pre><pre>data: 354 Enter mail, end with <CRLF>.<CRLF>
+</pre><pre>quit: 221 See ya in cyberspace
+</pre><pre>User-Agent: OnlineInnovations
+Date: Mon, 24 Oct 2011 17:56:54 +0200
+To: 3pmg66-rvg183@twittermail.com
+From: "oiCMS" <no-reply@onlineinnovations.com>
+Return-Path: <no-reply@onlineinnovations.com>
+Subject: =?utf-8?Q?Subject:The_iconic_Marlin_Hotel_joins_our_growing_portfolio=3f?=
+ =?utf-8?Q?_http://bit.ly/pugXQe?=
+Reply-To: "no-reply@onlineinnovations.com" <no-reply@onlineinnovations.com>
+X-Sender: no-reply@onlineinnovations.com
+X-Mailer: OnlineInnovations
+X-Priority: 3 (Normal)
+Message-ID: <4ea58ac8ecc90@onlineinnovations.com>
+Mime-Version: 1.0
+
+
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_4ea58ac8eccbc&quot;
+
+This is a multi-part message in MIME format.
+Your email application may not support this format.
+
+--B_ALT_4ea58ac8eccbc
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Body:The iconic Marlin Hotel joins our growing portfolio?
+http://bit.ly/pugXQe
+
+
+--B_ALT_4ea58ac8eccbc
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Body:The iconic Marlin Hotel joins our growing portfolio? http://bit.ly/pug=
+XQe
+
+--B_ALT_4ea58ac8eccbc--</pre>
